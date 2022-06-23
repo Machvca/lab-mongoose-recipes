@@ -43,7 +43,15 @@ mongoose
     //console.log(Recipe);
   })
 
+  .then((response) => {
+    console.log(response.title)});
 
+    .then((response) => {
+      response.forEach ((item) => {
+console.log(item.title)
+      })
+    }) 
+    
 
 //iteraion 4
   .then((response) => {
@@ -63,6 +71,11 @@ mongoose
    
     return Recipe.findOneAndDelete({ title: "Carrot Cake" });
  })
+
+
+ .then((response) => {
+mongoose.connection.close() 
+  })
 
   .catch((error) => {
     console.error("Error connecting to the database", error);
