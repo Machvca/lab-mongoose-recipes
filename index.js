@@ -43,6 +43,20 @@ mongoose
     //console.log(Recipe);
   })
 
+
+
+//iteraion 4
+  .then((response) => {
+    console.log(response);
+
+    // actualizar
+    return Recipe.findOneAndUpdate(
+      { title: "Rigatoni alla Genovese" }, // query
+      { duration: 100 }, //valores nuevos
+      { new: true } //Me devuelve Andrea ya actualizada
+    );
+  })
+
   .catch((error) => {
     console.error("Error connecting to the database", error);
   });
