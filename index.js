@@ -57,6 +57,13 @@ mongoose
     );
   })
 
+
+  //iteration 5
+ .then((response) => {
+   
+    return Recipe.findOneAndDelete({ title: "Carrot Cake" });
+ })
+
   .catch((error) => {
     console.error("Error connecting to the database", error);
   });
