@@ -15,7 +15,7 @@ const recipeSchema = new Schema({
   },
 
   ingredients: {
-    type: String,
+    type: [String],
      // en caso que la caracteristica no se pase, será el valor indicado.
   },
 
@@ -43,7 +43,7 @@ const recipeSchema = new Schema({
     
   },
 created:{
-    type:Date //default:"today",
+    type:Date, //default:"today",
     
   },
 
