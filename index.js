@@ -33,6 +33,16 @@ mongoose
     });
   })
 
+  .then((response) => {
+    //descomentarrr;
+    // console.log("bob ha sido agregado")
+    //console.log("Base de datos limpia!");
+
+    // añadir muchos
+    return Recipe.insertMany(data);
+    //console.log(Recipe);
+  })
+
   .catch((error) => {
     console.error("Error connecting to the database", error);
   });
